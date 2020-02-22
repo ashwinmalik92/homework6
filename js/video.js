@@ -48,15 +48,15 @@ function skipAhead() {
 } 
 
 function mute() { 
-  	if (video.muted === false) {
-		video.muted = true;
-		document.querySelector("#mute").innerHTML = "Unmute";
-		console.log("Muted");
-	}
-	else {
+  	if (video.muted) {
 		video.muted = false;
 		document.querySelector("#mute").innerHTML = "Mute";
 		console.log("Unmuted");
+	}
+	else {
+		video.muted = true;
+		document.querySelector("#mute").innerHTML = "Unmute";
+		console.log("Muted");
 	}
 }
 
