@@ -7,11 +7,11 @@ var dispVolume;
 function getVid() {
 	video = document.querySelector("#myVideo"); 
 	video.setAttribute("poster", "images/thumb.jpg");
-	document.querySelector("#volume").innerHTML = "100%";
 }
 
 function playVid() { 
 	video.play();
+	document.querySelector("#volume").innerHTML = volumeSlider.value + "%";
 	console.log("Play Video");
 } 
 
